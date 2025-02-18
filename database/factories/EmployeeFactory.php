@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Job>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Employee>
  */
-class JobFactory extends Factory
+class EmployeeFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,7 @@ class JobFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->jobTitle,
-            'employee_id' => \App\Models\Employee::factory(),
-            'salary' => '$50,000.00'
-            //
+            'name' => fake()->company(),
         ];
     }
 }
